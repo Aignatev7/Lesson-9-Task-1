@@ -13,12 +13,12 @@ public:
 		denominator_ = denominator;
 	}
 
-	bool operator==(Fraction other) { return numerator_ == denominator_; }
-	bool operator!=(Fraction other) { return !(numerator_ == denominator_); }
-	bool operator<(Fraction other) { return numerator_ < denominator_; }
-	bool operator>(Fraction other) { return numerator_ > denominator_; }
-	bool operator<=(Fraction other) { return !(numerator_ > denominator_); }
-	bool operator>=(Fraction other) { return !(numerator_ < denominator_); }
+	bool operator==(Fraction other) { if ((numerator_ / denominator_) == (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
+	bool operator!=(Fraction other) { if ((numerator_ / denominator_) != (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
+	bool operator<(Fraction other) { if ((numerator_ / denominator_) < (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
+	bool operator>(Fraction other) { if ((numerator_ / denominator_) > (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
+	bool operator<=(Fraction other) { if ((numerator_ / denominator_) <= (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
+	bool operator>=(Fraction other) { if ((numerator_ / denominator_) >= (other.numerator_ / other.denominator_)) { return true; } else { return false; } }
 };
 
 int main()
@@ -37,6 +37,7 @@ int main()
 
 
 /*
+Задача 1. Сравнения в дробях
 Ваша задача — дописать класс Fraction так, чтобы программа компилировалась и работала корректно.
 
 Пример работы программы
